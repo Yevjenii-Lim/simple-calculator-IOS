@@ -302,6 +302,11 @@
                     </view>
                     <connections>
                         <outlet property="display" destination="gC2-i9-XzD" id="dzI-BH-Xhw"/>
+                        <outlet property="divideBtn" destination="G64-9b-ycy" id="FYO-Xa-OFR"/>
+                        <outlet property="equalEctualBtn" destination="FGk-T1-huW" id="1Mh-wt-vTD"/>
+                        <outlet property="minusBtn" destination="wKr-Ro-rCd" id="lIW-Sg-Egk"/>
+                        <outlet property="multBtn" destination="DbC-GJ-p5L" id="Fe1-nS-bPo"/>
+                        <outlet property="plusBtn" destination="fBd-7N-tqa" id="p38-ag-iJR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3E-z2-QY8" sceneMemberID="firstResponder"/>
