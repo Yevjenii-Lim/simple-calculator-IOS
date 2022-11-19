@@ -17,29 +17,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var plusBtn: UIButton!
     @IBOutlet weak var minusBtn: UIButton!
     @IBOutlet weak var multBtn: UIButton!
-    var allButtons = [UIButton]()
+    
+    var highLightedBtn: UIButton!
     var setOfNum1 = ""
     var setOfNum2 = ""
     var sum = ""
     var actionSymbol = ""
     var swithToNextSetOfNum = true
     var equalBtn = false
-    var highlightedBtn = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        allButtons.append(divideBtn)
-        allButtons.append(equalEctualBtn)
-        allButtons.append(plusBtn)
-        allButtons.append(minusBtn)
-        allButtons.append(multBtn)
-        
     }
     
     @IBAction func addNumber(_ sender: AnyObject) {
         guard let button = sender as? UIButton else {
             return
          }
+        if highLightedBtn != nil && highLightedBtn.alpha < 1{
+            highLightedBtn.alpha = 1
+        }
         UIView.animate(withDuration: 0.2) {
             button.alpha = 0.5
          }
@@ -116,11 +114,11 @@ class ViewController: UIViewController {
     }
     
     func highlightBtn(button: UIButton) {
-        for item in allButtons {
-            item.alpha = 1
+        if(highLightedBtn != nil) {
+            highLightedBtn.alpha = 1
         }
         button.alpha = 0.5
-       
+        highLightedBtn = button
     }
 }
 
